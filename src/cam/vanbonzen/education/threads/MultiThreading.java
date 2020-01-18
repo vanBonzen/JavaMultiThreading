@@ -1,7 +1,7 @@
-package cam.vanbonzen.education;
+package cam.vanbonzen.education.threads;
 
-import cam.vanbonzen.education.threads.WithRunnable;
-import cam.vanbonzen.education.threads.WithThread;
+import cam.vanbonzen.education.threads.helpers.WithRunnable;
+import cam.vanbonzen.education.threads.helpers.WithThread;
 
 /**
  * Multithreading Demo by Marcel Neuheiser @ Provadis GmbH

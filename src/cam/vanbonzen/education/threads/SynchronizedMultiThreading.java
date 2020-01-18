@@ -1,7 +1,7 @@
-package cam.vanbonzen.education;
+package cam.vanbonzen.education.threads;
 
-import cam.vanbonzen.education.threads.Counter;
-import cam.vanbonzen.education.threads.CounterSynchronized;
+import cam.vanbonzen.education.threads.helpers.Counter;
+import cam.vanbonzen.education.threads.helpers.CounterSynchronized;
 
 /**
  * Multithreading Demo by Marcel Neuheiser @ Provadis GmbH

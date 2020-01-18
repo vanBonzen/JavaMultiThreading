@@ -1,10 +1,10 @@
-package cam.vanbonzen.education.threads;
+package cam.vanbonzen.education.threads.helpers;
 
 /**
  * Multithreading Demo by Marcel Neuheiser @ Provadis GmbH
  *              for education purpose only
  */
-public class Consumer implements Runnable
+public class Producer implements Runnable
 {
     private Q q;
 
@@ -12,11 +12,11 @@ public class Consumer implements Runnable
      * Constructor
      * @param q primitive Object of Type Q
      */
-    public Consumer(Q q)
+    public Producer(Q q)
     {
         this.q = q;
         // Initialize and start new Thread
-        Thread t = new Thread(this, "Consumer");
+        Thread t = new Thread(this, "Producer");
         t.start();
     }
 
@@ -24,17 +24,19 @@ public class Consumer implements Runnable
     @Override
     public void run()
     {
+        // Integer i to Cont upward
+        int i = 0;
+
         // Infinite loop
         while (true)
         {
-            // Consuming q aka. printing the Number
-            q.printNumber();
+            // Producing the Number aka setting it
+            q.setNumber(i++);
             try
             {
-                // Consume every 5 seconds
-                Thread.sleep(5000);
-            }
-            catch (Exception ignored) { } // ignoring all Exceptions for this Demo
+                // Produce every half second
+                Thread.sleep(500);
+            } catch (Exception ignored) { } // Ignoring all Exceptions for this Demo
         }
     }
     // endregion

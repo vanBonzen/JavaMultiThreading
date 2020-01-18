@@ -1,8 +1,8 @@
-package cam.vanbonzen.education;
+package cam.vanbonzen.education.threads;
 
-import cam.vanbonzen.education.threads.Consumer;
-import cam.vanbonzen.education.threads.Producer;
-import cam.vanbonzen.education.threads.Q;
+import cam.vanbonzen.education.threads.helpers.Consumer;
+import cam.vanbonzen.education.threads.helpers.Producer;
+import cam.vanbonzen.education.threads.helpers.Q;
 
 /**
  * Multithreading Demo by Marcel Neuheiser @ Provadis GmbH

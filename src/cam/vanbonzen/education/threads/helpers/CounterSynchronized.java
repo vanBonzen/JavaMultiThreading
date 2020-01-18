@@ -1,4 +1,4 @@
-package cam.vanbonzen.education.threads;
+package cam.vanbonzen.education.threads.helpers;
 
 /**
  * Multithreading Demo by Marcel Neuheiser @ Provadis GmbH
