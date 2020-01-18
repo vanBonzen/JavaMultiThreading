@@ -6,9 +6,15 @@ package cam.vanbonzen.education.threads;
  */
 public class Q
 {
+    // Integer Value witch can be set / printed
     private int number;
+    // Boolean to lock / unlock access to Number
     private boolean valueSet = false;
 
+    /**
+     * Setting the number Attribute
+     * @param a Integer with new Value of number
+     */
     synchronized void setNumber(int a)
     {
         while (valueSet)
@@ -26,12 +32,16 @@ public class Q
         notify();
     }
 
+    /**
+     * Print Value of number Attribute
+     */
     synchronized void printNumber()
     {
         while (!valueSet)
         {
             try
             {
+                // Waiting to get notified
                 wait();
             } catch (Exception ignored) { }
         }
