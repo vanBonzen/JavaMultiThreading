@@ -16,7 +16,7 @@ public class WithRunnable implements Runnable
             {
                 Thread.sleep(1);
             }
-            catch (Exception ignored) { }
+            catch (Exception ignored) { } // Ignoring all Exceptions for this Demo
         }
     }
 }

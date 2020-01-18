@@ -17,13 +17,14 @@ public class Q
      */
     synchronized void setNumber(int a)
     {
+        // Wait when new number has been set
         while (valueSet)
         {
             try
             {
                 // Waiting to get notified
                 wait();
-            } catch (Exception ignored) { }
+            } catch (Exception ignored) { } // Ignoring all Exceptions for this Demo
         }
         this.number = a;
         System.out.println("Set: " + number);
@@ -37,13 +38,14 @@ public class Q
      */
     synchronized void printNumber()
     {
+        // Wait as long as number has not been set
         while (!valueSet)
         {
             try
             {
                 // Waiting to get notified
                 wait();
-            } catch (Exception ignored) { }
+            } catch (Exception ignored) { } // Ignoring all Exceptions for this Demo
         }
         System.out.println("Get: " + number);
         valueSet = false;

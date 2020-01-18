@@ -35,7 +35,7 @@ public class MultiThreading
                 {
                     Thread.sleep(1);
                 }
-                catch (Exception ignored) { }
+                catch (Exception ignored) { } // Ignoring all Exceptions for this Demo
             }
         };
 
@@ -58,7 +58,7 @@ public class MultiThreading
             withRunnable.join();
             withLambda.join();
         }
-        catch (InterruptedException ignored) { }
+        catch (InterruptedException ignored) { } // Ignoring all Exceptions for this Demo
 
         // Rechecking if Thread is running after join()
         System.out.println("Is withThread alive? " + withThread.isAlive());

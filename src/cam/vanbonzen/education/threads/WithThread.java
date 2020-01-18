@@ -15,7 +15,7 @@ public class WithThread extends Thread
             {
                 Thread.sleep(1);
             }
-            catch (Exception ignored) { }
+            catch (Exception ignored) { } // Ignoring all Exceptions for this Demo
         }
     }
 }

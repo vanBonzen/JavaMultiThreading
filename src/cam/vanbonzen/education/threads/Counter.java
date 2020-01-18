@@ -8,6 +8,7 @@ public class Counter
 {
     public int count;
 
+    // Method with Thread collision
     public void increment()
     {
         count++;

@@ -8,6 +8,7 @@ public class CounterSynchronized
 {
     public int count;
 
+    // Synchronized Method to avoid Thread collision
     public synchronized void increment()
     {
         count++;

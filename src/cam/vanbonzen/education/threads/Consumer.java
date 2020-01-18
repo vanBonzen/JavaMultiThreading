@@ -20,9 +20,11 @@ public class Consumer implements Runnable
         t.start();
     }
 
+    // region run() Method
     @Override
     public void run()
     {
+        // Infinite loop
         while (true)
         {
             // Consuming q aka. printing the Number
@@ -32,7 +34,8 @@ public class Consumer implements Runnable
                 // Consume every 5 seconds
                 Thread.sleep(5000);
             }
-            catch (Exception ignored) { }
+            catch (Exception ignored) { } // ignoring all Exceptions for this Demo
         }
     }
+    // endregion
 }

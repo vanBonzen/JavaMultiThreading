@@ -8,6 +8,10 @@ public class Producer implements Runnable
 {
     private Q q;
 
+    /**
+     * Constructor
+     * @param q primitive Object of Type Q
+     */
     public Producer(Q q)
     {
         this.q = q;
@@ -16,11 +20,14 @@ public class Producer implements Runnable
         t.start();
     }
 
+    // region run() Method
     @Override
     public void run()
     {
+        // Integer i to Cont upward
         int i = 0;
 
+        // Infinite loop
         while (true)
         {
             // Producing the Number aka setting it
@@ -29,7 +36,8 @@ public class Producer implements Runnable
             {
                 // Produce every half second
                 Thread.sleep(500);
-            } catch (Exception ignored) { }
+            } catch (Exception ignored) { } // Ignoring all Exceptions for this Demo
         }
     }
+    // endregion
 }
